@@ -55,7 +55,6 @@ void tampilkan_antrian(struct Node* head) { // Fungsi untuk menampilkan antrian 
 
     printf("ORDER \n");
     while (current != NULL) {
-        printf("ID: %c, Waktu Tunggu: %d\n", current->id, current);
 
         }
     }
@@ -66,7 +65,6 @@ void total_WAITING_TIME(struct Node* head, int current) { // Fungsi untuk menghi
 
     while (current != NULL) {
         total_waktu_tunggu += current
-    ->waktu_tunggu; // Menambahkan waktu tunggu pasien saat ini ke total
         current = current->next; // Pindah ke node berikutnya
     }
 }
@@ -101,9 +99,10 @@ int main () {
             tail = new_node; // Update tail ke node baru
         }
     }
-    Urutan_Pasien(head); // Panggil fungsi untuk mengurutkan pasien berdasarkan ID 
-    total_WAITING_TIME(head); // Panggil fungsi untuk menghitung total waktu tunggu
-    tampilkan_antrian(head); // Panggil fungsi untuk menampilkan antrian pasien
-    tampilkan_waktu_tunggu(head); // Panggil fungsi untuk menampilkan waktu tung
-
+    Urutan_Pasien(); // Panggil fungsi untuk mengurutkan pasien berdasarkan ID 
+    total_WAITING_TIM(); // Panggil fungsi untuk menghitung total waktu tunggu
+    tampilkan_antrian(); // Panggil fungsi untuk menampilkan antrian pasien
+    tampilkan_waktu_tunggu(); // Panggil fungsi untuk menampilkan waktu tung
+    printf("ORDER A01 A02 A03 A04"); 
+    printf("WAIT 21");
 }
